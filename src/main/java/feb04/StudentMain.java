@@ -8,6 +8,8 @@ public class StudentMain {
         ArrayList<Student> studentslist=new ArrayList<>();
         studentslist.add(new Student("Rahit",34));
         studentslist.add(new Student("Richa",56));
+        studentslist.add(new Student("Zen",23));
+
         studentslist.add(new Student("Amita",23));
 
         System.out.println("Unsorted list: ");
@@ -16,8 +18,16 @@ public class StudentMain {
             System.out.print(student+" ");
         }
         Collections.sort(studentslist,new CompareStudentRollNo());
+//        System.out.println();
+//        System.out.println("After list sorted by rollno:");
+//        for (Student student:
+//                studentslist) {
+//            System.out.print(student+" ");
+//        }
+
+        Collections.sort(studentslist,new CompareStudentName());
         System.out.println();
-        System.out.println("After list sorted by rollno:");
+        System.out.println("After list sorted by name:");
         for (Student student:
                 studentslist) {
             System.out.print(student+" ");
